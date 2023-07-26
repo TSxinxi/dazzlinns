@@ -14,17 +14,17 @@ if (canUseDOM) {
 }
 
 export function getShopAddress() {
-  return 'uniquehzts.myshopify.com';
+  // return 'uniquehzts.myshopify.com';
   // return 'newsmartdeal.myshopify.com';
   // return 'modafallonei.myshopify.com';
   // return 'hz-ts-10-21-new-addev-01.myshopify.com';
   // return 'shop-salesdish.myshopify.com';
-  // return 'dazzlinns.myshopify.com';
+  return 'dazzlinns.myshopify.com';
 }
 
 export function getDomain() {
-  // return 'https://gateway.antdiy.vip';
-  return 'https://gateway.di79.com';
+  return 'https://gateway.antdiy.vip';
+  // return 'https://gateway.di79.com';
 }
 
 export function openWhatsApp() {
