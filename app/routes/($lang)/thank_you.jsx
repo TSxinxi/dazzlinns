@@ -125,14 +125,14 @@ export function OrderBox({ orderData }) {
             </div>
           </div>
         </div>
-        <button className='inline-block rounded font-medium text-center w-full bg-primary text-contrast' style={{ marginTop: '20px' }} onClick={() => { window.open('https://' + getShopAddress(), '_self') }}>
+        {/* <button className='inline-block rounded font-medium text-center w-full bg-primary text-contrast' style={{ marginTop: '20px' }} onClick={() => { window.open('https://' + getShopAddress(), '_self') }}>
           <Text
             as="span"
             className="flex items-center justify-center gap-2 py-3 px-6"
           >
             <span>{LText.keeyshop}</span>
           </Text>
-        </button>
+        </button> */}
       </div>
     );
   }

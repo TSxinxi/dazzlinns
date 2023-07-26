@@ -603,7 +603,6 @@ function SettleAccounts(selectedVar, params, setErrorText, setIsSubmit) {
   params.shop = getShopAddress()
   params.source = source_name ? source_name : null
   if (LText.type === 'HUF') {
-    params.tags = LText.type
     params.area = params.area + ' ' + params.building
   }
   params.tags = LText.type
