@@ -19,7 +19,8 @@ export function getShopAddress() {
   // return 'modafallonei.myshopify.com';
   // return 'hz-ts-10-21-new-addev-01.myshopify.com';
   // return 'shop-salesdish.myshopify.com';
-  return 'dazzlinns.myshopify.com';
+  // return 'dazzlinns.myshopify.com';
+  return 'croiala.myshopify.com';
 }
 
 export function getDomain() {

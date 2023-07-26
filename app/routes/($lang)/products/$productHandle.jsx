@@ -556,7 +556,7 @@ export default function Product() {
               <span>{currencyCode || 'SAR'}</span>
             </div>
 
-            <img className='logo' src={`https://platform.antdiy.vip/static/image/${currencyCode === 'AED' ? 'dazzlinn_icon' : 'HULTOO_icon'}.svg`} />
+            <img className='logo' src={`https://platform.antdiy.vip/static/image/dazzlinn_icon.svg`} />
             {/* <p onClick={() => { window.open('https://' + getShopAddress()) }}><img src="https://platform.antdiy.vip/static/image/hultoo_home.svg" /></p> */}
             <p></p>
           </div>
