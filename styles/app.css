@@ -234,7 +234,7 @@ shop-pay-button {
   }
   .stick_service img{
     float: left;
-    margin-right: 10px;
+    margin: 0 10px;
     width: 60px;
     height: 60px;
     border-radius: 50%;
