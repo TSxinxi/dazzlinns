@@ -1454,6 +1454,25 @@ select{
     font-weight: 400;
     text-decoration: line-through;
   }
+@media (max-width: 640px) {
+    .buy_btn_style .whitespace-pre-wrap{
+      font-size: 1.4rem;
+    }
+    .buy_btn_price .btn_price_new{
+      font-size: 1.5rem;
+    }
+  }
+/* @media (max-width: 500px) {
+    .buy_btn_style .whitespace-pre-wrap{
+      font-size: 1rem;
+    }
+    .buy_btn_price .btn_price_new{
+      font-size: 1.2rem;
+    }
+    .buy_btn_price .btn_price_old{
+      font-size: .8rem;
+    }
+  } */
 .product_details{
     justify-content: center;
   }
