@@ -46,7 +46,7 @@ export const links = () => {
       rel: 'preconnect',
       href: 'https://shop.app',
     },
-    { rel: 'icon', href: 'https://platform.antdiy.vip/static/image/logo_modamias.png?crop=center&height=32&v=1682331063&width=32' },
+    { rel: 'icon', href: '//www.dazzlinn.com/cdn/shop/files/10x.png?crop=center&height=32&v=1690276429&width=32' },
   ];
 };
 

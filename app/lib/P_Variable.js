@@ -30,7 +30,7 @@ export function getDomain() {
 
 export function openWhatsApp() {
   const whatsApp = {
-    phone: '8618267116473',
+    phone: '8615158720588',
     isOpen: false,
   }
   return whatsApp;
@@ -967,7 +967,7 @@ export function getLanguage() {
       type: 'SAR',
       country: 'Saudi Arabia',
       country_code: 'SAU',
-      deliveryProcess: 'deliveryProcess2.png',
+      deliveryProcess: 'dazzlinns_flow_chart.png',
       whatsAppText: 'يرجى نقر الإرسال مباشرة، لا تحذف الرابط أدناه، ستحصل على  الإجابات الأكثر دقة من خدمة العملاء',
       notFoundTit: 'لقد فقدنا هذه الصفحة',
       notFoundText: 'لم نتمكن من العثور على الصفحة التي تبحث عنها.',
@@ -1006,7 +1006,7 @@ export function getLanguage() {
       image5: 'معذرةً ، لا يمكننا قبول سوى 5 images لمراجعة واحدة.',
       rightEmail: 'الرجاء ادخال إيميل صحيح',
       unknown: 'مجهول',
-      acticleList: ['طرق الدفع', 'توصيل', 'معلومات عنا', 'البنود و الظروف', 'العوائد والتبادلات', 'سياسة الخصوصية', 'اتصل بنا'],
+      acticleList: ['قواعد العودة', 'سياسة الخصوصية', 'شروط الخدمة', 'سياسة الشحن'],
       discountZone: 'منطقة الخصومات للمتجر',
       free7: 'خدمة الاستبدال والاسترداد المجاني خلال سبع أيام',
       deliver: 'التوصيل مجاناً',
