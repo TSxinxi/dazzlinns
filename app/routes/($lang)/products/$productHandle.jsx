@@ -557,8 +557,8 @@ export default function Product() {
             </div>
 
             <img className='logo' src={`https://platform.antdiy.vip/static/image/dazzlinn_icon.svg`} />
-            {/* <p onClick={() => { window.open('https://' + getShopAddress()) }}><img src="https://platform.antdiy.vip/static/image/hultoo_home.svg" /></p> */}
-            <p></p>
+            <p onClick={() => { window.open('https://' + getShopAddress()) }}><img src="https://platform.antdiy.vip/static/image/hultoo_home.svg" /></p>
+            {/* <p></p> */}
           </div>
         </div>
         <div className="product_details items-start md:gap-6 md:grid-cols-2">
