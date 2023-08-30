@@ -538,6 +538,10 @@ shop-pay-button {
   .description_box{
     padding-top: 20px;
   }
+  .description_box p,
+  .description_box img{
+    max-width: 100% !important;
+  }
   .comment_box{
     color: #4a547a;
     display: flex;
