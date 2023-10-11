@@ -84,7 +84,7 @@ export default function App() {
     if (getReferer() && getReferer().split('.com')[0].indexOf(window.location.host.split('.com')[0]) === -1 && (!localStorage.getItem('refererName') || (localStorage.getItem('refererName') && localStorage.getItem('refererName') !== getReferer()))) {
       localStorage.setItem('refererName', getReferer())
     }
-    // useEffect(() => {
+    useEffect(() => {
     //   (function (h, o, t, j, a, r) {
     //     h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
     //     h._hjSettings = { hjid: 3527157, hjsv: 6 };
@@ -99,20 +99,20 @@ export default function App() {
     //   gtag('js', new Date());
     //   gtag('config', 'G-X12GDSEKQ1');
 
-    //   !function (f, b, e, v, n, t, s) {
-    //     if (f.fbq) return; n = f.fbq = function () {
-    //       n.callMethod ?
-    //         n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-    //     };
-    //     if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
-    //     n.queue = []; t = b.createElement(e); t.async = !0;
-    //     t.src = v; s = b.getElementsByTagName(e)[0];
-    //     s.parentNode.insertBefore(t, s)
-    //   }(window, document, 'script',
-    //     'https://connect.facebook.net/en_US/fbevents.js');
-    //   fbq('init', '895173741588158');
-    //   fbq('track', 'PageView');
-    // }, []);
+      !function (f, b, e, v, n, t, s) {
+        if (f.fbq) return; n = f.fbq = function () {
+          n.callMethod ?
+            n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        };
+        if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+        n.queue = []; t = b.createElement(e); t.async = !0;
+        t.src = v; s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s)
+      }(window, document, 'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '625951499641486');
+      fbq('track', 'PageView');
+    }, []);
   }
   return (
     <html lang={locale.language} style={{ direction: getDirection() }}>

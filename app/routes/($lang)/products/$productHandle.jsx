@@ -845,6 +845,7 @@ function goSettleAccounts() {
   // localStorage.setItem('selectedVariant', JSON.stringify(selectedVariant))
   localStorage.removeItem('productVariant')
   localStorage.setItem('productVariant', JSON.stringify(productData))
+  sendFbq('AddToCart')
 
   let source_name = window.localStorage.getItem('sourceName')
   if (source_name) {
@@ -857,6 +858,13 @@ function goSettleAccounts() {
     })
   } else {
     window.open(`/settleAccounts?id=${productData.id}`, '_self')
+  }
+}
+
+// FBQ
+function sendFbq(a, b, c) {
+  if ("function" == typeof window.fbq){
+    window.fbq("track", a, b, c)
   }
 }
 

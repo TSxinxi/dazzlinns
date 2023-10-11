@@ -612,6 +612,27 @@ function SettleAccounts(selectedVar, params, setErrorText, setIsSubmit) {
   fetch.post(`${getDomain()}/account-service/media_orders/create/pass`, params).then(res => {
     if (res && res.data) {
       if (res.data.success && res.data.data && res.data.data.oid) {
+        let orderData = res.data?.data?.detail?.order
+        if (orderData) {
+          let contents = line_items.map(item => {
+            return {
+              id: item.variant_id,
+              quantity: item.quantity,
+            }
+          })
+          sendFbq(
+            'Purchase',
+            {
+              content_type: 'product',
+              contents: contents,
+              value: orderData?.total_price,
+              currency: orderData?.currency,
+            },
+            {
+              eventID: orderData?.token || (new Date).getTime() + ""
+            }
+          )
+        }
         window.open(`/thank_you?id=${res.data.data.oid}`, '_self')
       } else {
         setIsSubmit(false)
@@ -629,5 +650,12 @@ function setSplit(data) {
     return arr[arr.length - 1]
   } else {
     return data
+  }
+}
+
+// FBQ
+function sendFbq(a, b, c) {
+  if ("function" == typeof window.fbq) {
+    window.fbq("track", a, b, c)
   }
 }
