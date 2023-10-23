@@ -2,6 +2,8 @@
 import { ATTR_LOADING_EAGER } from '~/lib/const';
 import { useEffect, useState } from 'react';
 import Swiper from 'swiper'
+import { getLanguage } from '~/lib/P_Variable';
+const LText = getLanguage()
 
 /**
  * A client component that defines a media gallery for hosting images, 3D models, and videos of products
@@ -29,7 +31,7 @@ export function ProductGallery({ media, product, className }) {
 
 
   return (
-    <div className={`sticky_img`}>
+    <div className={`sticky_img`} style={{ padding: LText.type === 'RON' ? '0' : '' }}>
       <div className="swiper-container" id='swiper'>
         <div className="swiper-wrapper">
           {media.map((med, i) => {

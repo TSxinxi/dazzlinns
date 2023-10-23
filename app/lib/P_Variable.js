@@ -8,6 +8,9 @@ if (canUseDOM) {
   if (href && href.indexOf('-aed') > -1) {
     currencyCode = 'AED'
   }
+  if (href && href.indexOf('-ronn') > -1) {
+    currencyCode = 'RON'
+  }
   if (localStorage.getItem('currencyCode')) {
     currencyCode = localStorage.getItem('currencyCode')
   }
@@ -32,7 +35,7 @@ export function openWhatsApp() {
 }
 
 export function getDirection() {
-  return 'rtl';
+  return currencyCode === 'RON' ? 'initial' : 'rtl';
   // return 'initial';
 }
 

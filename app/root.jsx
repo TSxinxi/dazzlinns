@@ -1,5 +1,5 @@
 import { defer } from '@shopify/remix-oxygen';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import {
   Links,
   Meta,
@@ -74,25 +74,11 @@ export async function loader({ context }) {
 }
 
 export default function App() {
-  Sentry.init({
-    dsn: "https://b093aad603002202fc32b98f2b3fd792@o4506097284677632.ingest.sentry.io/4506098124652544",
-    integrations: [
-      new Sentry.BrowserTracing({
-        // Set 'tracePropagationTargets' to control for which URLs distributed tracing should be enabled
-        tracePropagationTargets: ["localhost", /^https:\/\/page.dazzlinn.com\.io\/api/],
-      }),
-      new Sentry.Replay(),
-    ],
-    // Performance Monitoring
-    tracesSampleRate: 1.0, // Capture 100% of the transactions
-    // Session Replay
-    replaysSessionSampleRate: 0.1, // This sets the sample rate at 10%. You may want to change it to 100% while in development and then sample at a lower rate in production.
-    replaysOnErrorSampleRate: 1.0, // If you're not already sampling the entire session, change the sample rate to 100% when sampling sessions where errors occur.
-  });
 
   const data = useLoaderData();
   const locale = data.selectedLocale ?? DEFAULT_LOCALE;
   const hasUserConsent = true;
+  const [direction, setDirection] = useState('rtl');
 
   useAnalytics(hasUserConsent, locale);
 
@@ -102,19 +88,35 @@ export default function App() {
       localStorage.setItem('refererName', getReferer())
     }
     useEffect(() => {
-    //   (function (h, o, t, j, a, r) {
-    //     h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
-    //     h._hjSettings = { hjid: 3527157, hjsv: 6 };
-    //     a = o.getElementsByTagName('head')[0];
-    //     r = o.createElement('script'); r.async = 1;
-    //     r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-    //     a.appendChild(r);
-    //   })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
-  
-    //   window.dataLayer = window.dataLayer || [];
-    //   function gtag() { dataLayer.push(arguments); }
-    //   gtag('js', new Date());
-    //   gtag('config', 'G-X12GDSEKQ1');
+
+      Sentry.init({
+        dsn: "https://b093aad603002202fc32b98f2b3fd792@o4506097284677632.ingest.sentry.io/4506098124652544",
+        integrations: [
+          new Sentry.BrowserTracing({
+            // Set 'tracePropagationTargets' to control for which URLs distributed tracing should be enabled
+            tracePropagationTargets: ["localhost", /^https:\/\/page.dazzlinn.com\.io\/api/],
+          }),
+          new Sentry.Replay(),
+        ],
+        // Performance Monitoring
+        tracesSampleRate: 1.0, // Capture 100% of the transactions
+        // Session Replay
+        replaysSessionSampleRate: 0.1, // This sets the sample rate at 10%. You may want to change it to 100% while in development and then sample at a lower rate in production.
+        replaysOnErrorSampleRate: 1.0, // If you're not already sampling the entire session, change the sample rate to 100% when sampling sessions where errors occur.
+      });
+      //   (function (h, o, t, j, a, r) {
+      //     h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+      //     h._hjSettings = { hjid: 3527157, hjsv: 6 };
+      //     a = o.getElementsByTagName('head')[0];
+      //     r = o.createElement('script'); r.async = 1;
+      //     r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+      //     a.appendChild(r);
+      //   })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+
+      //   window.dataLayer = window.dataLayer || [];
+      //   function gtag() { dataLayer.push(arguments); }
+      //   gtag('js', new Date());
+      //   gtag('config', 'G-X12GDSEKQ1');
 
       !function (f, b, e, v, n, t, s) {
         if (f.fbq) return; n = f.fbq = function () {
@@ -129,10 +131,12 @@ export default function App() {
         'https://connect.facebook.net/en_US/fbevents.js');
       fbq('init', '625951499641486');
       fbq('track', 'PageView');
+
+      setDirection(getDirection())
     }, []);
   }
   return (
-    <html lang={locale.language} style={{ direction: getDirection() }}>
+    <html lang={locale.language} style={{ direction: direction }}>
       <head>
         <Seo />
         <Meta />
