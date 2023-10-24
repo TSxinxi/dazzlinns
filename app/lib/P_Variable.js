@@ -1884,7 +1884,7 @@ export function getLanguage() {
       type: 'RON',
       country: 'Romania',
       country_code: 'ROU',
-      deliveryProcess: 'deliveryProcess1.jpg',
+      deliveryProcess: 'dazzlinns_ron_flow_chart.jpg',
       whatsAppText: 'Vă rugăm să faceți clic pe trimite direct, nu ștergeți linkul de mai jos, veți primi cele mai precise răspunsuri de la serviciul nostru pentru clienți',
       notFoundTit: 'Am pierdut această pagină',
       notFoundText: 'Nu am putut găsi pagina pe care o căutați.',
