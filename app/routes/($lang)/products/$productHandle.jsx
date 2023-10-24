@@ -571,7 +571,7 @@ export default function Product() {
                 // transform: 'scale(0.7)',
               }}></div>
               <img src={`https://platform.antdiy.vip/static/image/${LText.type === 'RON' ? 'croiala_icon' : currencyCode === 'AED' ? 'UAE-alianqiu' : 'hydrogen_site_alb'}.svg`} />
-              <span onClick={() => { lll() }}>{currencyCode || 'SAR'}</span>
+              <span>{currencyCode || 'SAR'}</span>
             </div>
 
             <img className='logo' src={`https://platform.antdiy.vip/static/image/dazzlinn_icon.svg`} />
