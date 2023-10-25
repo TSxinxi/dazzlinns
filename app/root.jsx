@@ -47,7 +47,7 @@ export const links = () => {
       rel: 'preconnect',
       href: 'https://shop.app',
     },
-    { rel: 'icon', href: '//www.dazzlinn.com/cdn/shop/files/10x.png?crop=center&height=32&v=1690276429&width=32' },
+    { rel: 'icon', href: 'https://cdn.shopifycdn.net/s/files/1/0790/0086/3012/files/2311.png' },
   ];
 };
 
