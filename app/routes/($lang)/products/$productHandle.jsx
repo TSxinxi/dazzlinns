@@ -575,7 +575,9 @@ export default function Product() {
             </div>
 
             <img className='logo' src={`https://platform.antdiy.vip/static/image/dazzlinn_icon.svg`} />
-            <p onClick={() => { window.open(`${LText.type === 'RON' ? 'https://g06ff1pwouygu0ms-79000863012.shopifypreview.com' : `https://${getShopAddress()}`}`) }}><img src="https://platform.antdiy.vip/static/image/hultoo_home.svg" /></p>
+            {
+              LText.type === 'RON' ? <p onClick={() => { window.open(`https://${getShopAddress()}`) }}><img src="https://platform.antdiy.vip/static/image/hultoo_home.svg" /></p> : <p></p>
+            }
             {/* <p></p> */}
           </div>
         </div>
