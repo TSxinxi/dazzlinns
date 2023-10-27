@@ -557,7 +557,7 @@ export default function Product() {
     <>
       <Section padding="x" className="px-0 prodect_section">
         <div className='top_height'>
-          <div className='product_top top_height' style={{ background: LText.type === 'RON' ? '#1F1F1F' : '' }}>
+          <div className='product_top top_height'>
 
             <div className='site'>
               <div style={{
@@ -574,9 +574,9 @@ export default function Product() {
               <span>{currencyCode || 'SAR'}</span>
             </div>
 
-            <img className='logo' src={`https://platform.antdiy.vip/static/image/dazzlinn_icon.svg`} />
+            <img className='logo' src={`https://platform.antdiy.vip/static/image/dazzlinn${LText.type === 'RON' ? '2' : ''}_icon.svg`} />
             {
-              LText.type === 'RON' ? <p onClick={() => { window.open(`https://${getShopAddress()}`) }}><img src="https://platform.antdiy.vip/static/image/hultoo_home.svg" /></p> : <p></p>
+              LText.type === 'RON' ? <p onClick={() => { window.open(`https://${getShopAddress()}`) }}><img src="https://platform.antdiy.vip/static/image/zoopetcc_home.svg" /></p> : <p></p>
             }
             {/* <p></p> */}
           </div>
@@ -772,15 +772,13 @@ export default function Product() {
             )}
           </div> : null
         }
-        {
-          LText.type === 'RON' ? null : <div className="article_nav">
-            {
-              LText.acticleList.map((item, index) => {
-                return <a href={`/articleNav?id=${index}&name=${item}`} key={index}>{item}</a>
-              })
-            }
-          </div>
-        }
+        <div className="article_nav">
+          {
+            LText.acticleList.map((item, index) => {
+              return <a href={`/articleNav?id=${index}&name=${item}`} key={index}>{item}</a>
+            })
+          }
+        </div>
         {selectedVariant && (
           // <div className="grid items-stretch gap-4 sticky_bottom">
           //   <button className={`inline-block rounded font-medium text-center w-full ${isOutOfStock ? 'border border-primary/10 bg-contrast text-primary' : 'bg-primary text-contrast'}`}>

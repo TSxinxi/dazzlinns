@@ -1923,7 +1923,7 @@ export function getLanguage() {
       image5: 'Ne pare rău, putem accepta doar 5 imagini pentru o recenzie.',
       rightEmail: 'Vă rugăm să introduceți un e-mail valid',
       unknown: 'necunoscut',
-      acticleList: ['Metode de plată', 'Livrare', 'Despre noi', 'Termeni și condiții', 'Retururi și schimburi', 'Politica de confidențialitate', 'Contactați-ne'],
+      acticleList: ['Politica de confidențialitate', 'Politică de livrare', 'Politică de retur', 'Termenii serviciului'],
       discountZone: 'zonă de reducere a magazinului',
       free7: 'Serviciu gratuit de schimb și rambursare în termen de șapte zile',
       deliver: 'Livrare gratuită',

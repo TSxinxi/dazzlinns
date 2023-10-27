@@ -158,6 +158,21 @@ shop-pay-button {
     z-index: 2;
     direction: rtl;
   }
+  .ron_box .product_top{
+    background: #fff;
+  }
+  .ron_box .article_nav{
+    background: #F3F3F3;
+  }
+  .ron_box .article_nav a{
+    color: #333333;
+  }
+  .ron_box .prev img{
+    transform: none !important;
+  }
+  .ron_box .discount_box{
+    min-width: 340px !important;
+  }
   .product_top p{
     cursor: pointer;
     margin-left: 10px;
