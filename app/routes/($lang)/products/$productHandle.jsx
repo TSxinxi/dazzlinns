@@ -252,6 +252,8 @@ function GetCommentHeader() {
           return urlDivHead.innerHTML
         }
       }
+    }).catch(function (error) {
+    }).finally(() => {
     }))
 }
 // 筛选下拉框
