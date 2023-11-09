@@ -29,7 +29,7 @@ export function getDomain() {
 export function openWhatsApp() {
   const whatsApp = {
     // phone: '8615158720588',
-    isOpen: true,
+    isOpen: false,
   }
   return whatsApp;
 }
